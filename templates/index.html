@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django - SecondProject</title>
+</head>
+<body>
+<table>
+{% for person in people %}
+    <tr>
+        <td>{{ person.id }}</td>
+        <td>{{ person.first_name }}</td>
+        <td>{{ person.last_name }}</td>
+        <td>{{ person.age }}</td>
+        <td>{{ person.created }}</td>
+        <td>{{ person.work_experience }}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
