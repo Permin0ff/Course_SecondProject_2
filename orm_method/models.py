@@ -28,5 +28,5 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=100)  # название (макс. Длина=100)
     authors = models.ManyToManyField(Author)  # поле многие-ко-многим
-    publisher = models.ForeignKey(Publisher)  # FK на Publisher
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)  # FK на Publisher
     publication_date = models.DateField()  # дата публикации
